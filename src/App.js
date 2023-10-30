@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+
+// les importations
+
+
+// import React from "react";
+ import Name from "./Name";
+import Image from "./Image";
+import Price from "./Price";
+import Description from "./Description";
+ import Card from 'react-bootstrap/Card';
+ import 'bootstrap/dist/css/bootstrap.min.css';
+ import MyWonderfulImage from "./MyWonderfulImage.jpg";
 
 function App() {
+ const styleObject = {color: 'red'}
+ const firstName = "houda"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div style={styleObject}>
+      <h1>hello world</h1>
+      <p>i'm houda</p>
     </div>
-  );
+
+
+    
+   <Card style={{ width: '18rem' }}>
+      <Image></Image>
+      <Card.Body>
+     <Name></Name>
+     <Price></Price>
+     <Description></Description>
+     
+        {firstName && (
+        <img src={MyWonderfulImage} alt="this is my second image"></img> )
+          }
+      </Card.Body>
+    </Card>}
+    
+    </>
+ )
 }
 
 export default App;
